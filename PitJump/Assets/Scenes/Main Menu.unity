@@ -389,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754e04e094f023d42bbfbe3b4dd9d42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instruction: Instruction
   playGameLevel: GameScene
 --- !u!1 &950365648
 GameObject:
@@ -473,7 +474,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 866872823}
-        m_MethodName: PlayGame
+        m_MethodName: Instruction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

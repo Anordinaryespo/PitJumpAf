@@ -69,7 +69,6 @@ public class PlatformGenerator : MonoBehaviour
     void Update()
     {
         float randomNumb = Random.Range(0f, 100f);
-        float randomNumbEnemy = Random.Range(0f, 100f);
 
         if (transform.position.x < generationPoint.position.x)
         {
@@ -118,7 +117,7 @@ public class PlatformGenerator : MonoBehaviour
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
 
-            if (randomNumbEnemy > randomEnemyTreshold)
+            if (randomNumb > randomEnemyTreshold && randomNumb < randomBigCoinTreshold)
             {
                 GameObject newEnemy = theEnemyPool.GetPooledObject();
 

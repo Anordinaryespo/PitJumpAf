@@ -676,7 +676,9 @@ MonoBehaviour:
   doublePoints: 0
   safeMode: 0
   powerupLength: 0
-  powerupSprites: []
+  powerupSprites:
+  - {fileID: 273572961323770473, guid: 6668d45ee0c9e1344979744ceb1ee44c, type: 3}
+  - {fileID: -3740706107649658327, guid: 6668d45ee0c9e1344979744ceb1ee44c, type: 3}
 --- !u!1 &235316531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2547,7 @@ MonoBehaviour:
   maxHeightChange: 6
   randomCoinsTreshold: 75
   randomBigCoinTreshold: 65
-  randomEnemyTreshold: 90
+  randomEnemyTreshold: 55
   theEnemyPool: {fileID: 1847315876}
   powerupHeight: 5
   powerupPool: {fileID: 176374823}

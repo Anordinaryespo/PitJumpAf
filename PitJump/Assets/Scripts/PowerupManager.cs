@@ -7,7 +7,7 @@ public class PowerupManager : MonoBehaviour
     private bool doublePoints;
     private bool safeMode;
 
-    public bool powerupActive;
+    private bool powerupActive;
 
     private float powerupLengthCounter;
 
@@ -19,8 +19,6 @@ public class PowerupManager : MonoBehaviour
     private float enemyRate;
 
     private PlatformDestroyer[] enemyList;
-
-   
 
     // Start is called before the first frame update
     void Start()
@@ -91,7 +89,33 @@ public class PowerupManager : MonoBehaviour
 
         powerupActive = true;
 
+    }
 
+    public bool getPowerupActive()
+    {
+        return powerupActive;
+    }
+    public void setPowerupActive(bool _powerupActive)
+    {
+        powerupActive = _powerupActive;
+    }
+
+    public bool getDoublePoints()
+    {
+        return doublePoints;
+    }
+    public void setDoublePoints(bool _doublePoints)
+    {
+        doublePoints = _doublePoints;
+    }
+
+    public bool getSafeMode()
+    {
+        return safeMode;
+    }
+    public void setSafeMode(bool _safeMode)
+    {
+        safeMode = _safeMode;
     }
 
 }

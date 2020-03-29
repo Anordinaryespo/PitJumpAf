@@ -42,6 +42,13 @@ public class Movement : MonoBehaviour
 	public ParticleSystem footsteps;
 	private ParticleSystem.EmissionModule footEmission;
 
+	public ParticleSystem powerup1;
+	private ParticleSystem.EmissionModule powerup1Emission;
+
+	public ParticleSystem powerup2;
+	private ParticleSystem.EmissionModule powerup2Emission;
+	public PowerupManager thePowerupManager;
+
 	void Start()
 	{
 		facingRight = true;
@@ -65,6 +72,9 @@ public class Movement : MonoBehaviour
 		stoppedJumping = true;
 
 		footEmission = footsteps.emission;
+		powerup1Emission = powerup1.emission;
+		powerup2Emission = powerup2.emission;
+		thePowerupManager = FindObjectOfType<PowerupManager>();
 
 	}
 
@@ -140,8 +150,28 @@ public class Movement : MonoBehaviour
 			footEmission.rateOverTime = 0f;
         }
 
+		//show powerup coin
+		if (thePowerupManager.getPowerupActive() == true && thePowerupManager.getDoublePoints() == true)
+		{
+			powerup1Emission.rateOverTime = 100f;
+		}
+		else
+		{
+			powerup1Emission.rateOverTime = 0f;
+		}
+
+		//show powerup safe
+		if (thePowerupManager.getPowerupActive() == true && thePowerupManager.getSafeMode() == true)
+		{
+			powerup2Emission.rateOverTime = 50f;
+		}
+		else
+		{
+			powerup2Emission.rateOverTime = 0f;
+		}
+
 		//Settare variabili ANIMAZIONI
-		//myAnimator.SetFloat("Speed", rigidBody.velocity.x);
+		//myAnimator.SetFloat("speed", rigidBody.velocity.x);
 		myAnimator.SetBool("Grounded", grounded); 
 
 		Flip(movement);

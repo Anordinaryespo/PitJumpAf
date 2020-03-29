@@ -5,8 +5,8 @@ using UnityEngine;
 public class PowerUps : MonoBehaviour
 {
 
-    public bool doublePoints;
-    public bool safeMode;
+    private bool doublePoints;
+    private bool safeMode;
 
     public float powerupLength;
 

@@ -80,7 +80,7 @@ public class PowerupManager : MonoBehaviour
 
             for (int i = 0; i < enemyList.Length; i++)
             {
-                if (enemyList[i].gameObject.name == "Enemy.2(Clone)")
+                if (enemyList[i].gameObject.name == "Enemy2(Clone)")
                 { 
                     enemyList[i].gameObject.SetActive(false);
                 }

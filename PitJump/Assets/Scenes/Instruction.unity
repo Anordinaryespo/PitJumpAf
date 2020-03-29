@@ -558,18 +558,20 @@ MonoBehaviour:
 
     Press <b>SPACEBAR</b> twice to <b>DOUBLE JUMP</b>
 
-
-    Grab
-    coins to increase your <b>SCORE</b>
-
-    The <b>BIGGER</b> the <b>BETTER</b>
+    Press
+    <b>C</b> to <b>ATTACK</b>
 
 
-    <b>
-    <color=yellow>YELLOW GEM = DOUBLE COINS</color> </b>
+    Grab coins to increase your <b>SCORE</b>
 
-    <b> <color=#42DDE3>BLUE
-    GEM = DESTROY ENEMIES</color> </b>'
+    The
+    <b>BIGGER</b> the <b>BETTER</b>
+
+
+    <b> <color=yellow>YELLOW GEM = DOUBLE COINS</color>
+    </b>
+
+    <b> <color=#42DDE3>BLUE GEM = DESTROY ENEMIES</color> </b>'
 --- !u!222 &915349290
 CanvasRenderer:
   m_ObjectHideFlags: 0

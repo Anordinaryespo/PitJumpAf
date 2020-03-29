@@ -49,6 +49,9 @@ public class Movement : MonoBehaviour
 	private ParticleSystem.EmissionModule powerup2Emission;
 	public PowerupManager thePowerupManager;
 
+	Collider2D mace;
+	private bool attacking = false;
+
 	void Start()
 	{
 		facingRight = true;
@@ -75,6 +78,9 @@ public class Movement : MonoBehaviour
 		powerup1Emission = powerup1.emission;
 		powerup2Emission = powerup2.emission;
 		thePowerupManager = FindObjectOfType<PowerupManager>();
+
+		mace = GameObject.Find("Mace").GetComponent<Collider2D>();
+
 
 	}
 
@@ -176,6 +182,26 @@ public class Movement : MonoBehaviour
 
 		Flip(movement);
 
+		if (Input.GetButtonDown("Attack") && !attacking)
+		{
+			myAnimator.SetTrigger("Attack");
+			mace.enabled = true;
+			//timeBtwAttack = startTimeBtwAttack;
+
+			attacking = true;
+		}
+
+		if (Input.GetButtonUp("Attack") && attacking)
+		{
+			/*timeBtwAttack -= Time.deltaTime;
+        }
+        else
+        {*/
+			attacking = false;
+			mace.enabled = false;
+			myAnimator.ResetTrigger("Attack");
+		}
+
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -214,6 +240,5 @@ public class Movement : MonoBehaviour
 			Destroy(other.gameObject);
         }
     }
-
 
 }

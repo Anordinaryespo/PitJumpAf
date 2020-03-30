@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public bool powerupReset;
 
+    public GameObject theBoss;
+    private float scoreCount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +30,25 @@ public class GameManager : MonoBehaviour
         playerStartPoint = thePlayer.transform.position;
 
         theScoreManager = FindObjectOfType<ScoreManager>();
+
+        theBoss = GameObject.Find("Boss");
+
+        scoreCount = 0;
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoreCount = theScoreManager.scoreCount;
+
+        if(theScoreManager.scoreCount >= 1000 && theScoreManager.scoreCount <= 3000)
+        {
+            theBoss.SetActive(true);
+        } else
+        {
+            theBoss.SetActive(false);
+        }
     }
 
     public void RestartGame()

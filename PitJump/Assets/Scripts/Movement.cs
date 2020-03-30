@@ -54,6 +54,8 @@ public class Movement : MonoBehaviour
 	Collider2D mace;
 	private bool attacking = false;
 	private ScoreManager theScoreManager;
+	private float timeBtwAttack;
+	public float startTimeBtwAttack;
 
 	void Start()
 	{
@@ -191,26 +193,24 @@ public class Movement : MonoBehaviour
 
 		Flip(movement);
 
+		timeBtwAttack -= Time.deltaTime;
+
+		if (timeBtwAttack <= 0)
+		{
+			mace.enabled = false;
+			myAnimator.ResetTrigger("Attack");
+			attacking = false;
+		}
+
 		if (Input.GetButtonDown("Attack") && !attacking)
 		{
 			myAnimator.SetTrigger("Attack");
 			mace.enabled = true;
-			//timeBtwAttack = startTimeBtwAttack;
+			timeBtwAttack = startTimeBtwAttack;
+			
 
 			attacking = true;
 		}
-
-		if (Input.GetButtonUp("Attack") && attacking)
-		{
-			/*timeBtwAttack -= Time.deltaTime;
-        }
-        else
-        {*/
-			attacking = false;
-			mace.enabled = false;
-			myAnimator.ResetTrigger("Attack");
-		}
-
 	}
 
 	void OnCollisionEnter2D (Collision2D other)

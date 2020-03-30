@@ -56,3 +56,6 @@ TagManager:
   - name: Death
     uniqueID: 260939091
     locked: 0
+  - name: Face
+    uniqueID: 1489861107
+    locked: 0

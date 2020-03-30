@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Attack
     - BigCoinGenerator
+    - Boss
     - CameraController
     - CoinGenerator
     - DeathMenu
@@ -38,8 +39,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -137,6 +140,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14352}
     - Class: 114
       Script: {instanceID: 14450}
+    - Class: 114
+      Script: {instanceID: 21998}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -712,7 +717,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 1a15957b3757b29cc06c92eeb86e7765
+      Hash: ba55605d3d56f5926c9b4e6d6aa4882d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -820,7 +825,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 19f6b2fd82a380c22365fad76399c544
+      Hash: 851f79d2613d248387515b3b2ab9c084
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -1058,9 +1063,21 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d27cedb6c41f25e1b08fc321d49654a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Projectiles
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Instruction.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Alessandro/Desktop/PitJump/PitJump.B004/PitJump.exe
+  playerPath: C:/Users/Alessandro/Desktop/PitJump/PitJump.B005/PitJump.exe

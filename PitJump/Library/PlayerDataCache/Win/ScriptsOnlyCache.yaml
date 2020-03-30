@@ -820,7 +820,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 40284cc298f9c7e32cab6e83e9e4fb0b
+      Hash: 19f6b2fd82a380c22365fad76399c544
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -1063,4 +1063,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Instruction.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Alessandro/Desktop/PitJump/PitJump.B003/PitJump.exe
+  playerPath: C:/Users/Alessandro/Desktop/PitJump/PitJump.B004/PitJump.exe

@@ -38,7 +38,9 @@ public class Movement : MonoBehaviour
 
 	public AudioSource jumpSound;
 	public AudioSource deathSound;
-
+	public AudioSource bgSound;
+	private bool restarted;
+	
 	public ParticleSystem footsteps;
 	private ParticleSystem.EmissionModule footEmission;
 
@@ -81,15 +83,20 @@ public class Movement : MonoBehaviour
 		thePowerupManager = FindObjectOfType<PowerupManager>();
 
 		mace = GameObject.Find("Mace").GetComponent<Collider2D>();
-		
 
+		restarted = false;
 
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
+		if(restarted == false)
+        {
+			bgSound.Play();
+			restarted = true;
+        }
+		
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
 		//grounded = Physics2D.IsTouchingLayers(myCollider, groundLayer);
@@ -215,6 +222,8 @@ public class Movement : MonoBehaviour
 			speedMilestoneCount = speedMilestoneCountStore;
 			speedIncreaseMilestone = speedIncreaseMilestoneStore;
 			deathSound.Play();
+			bgSound.Stop();
+			restarted = false;
 		}
     }
 

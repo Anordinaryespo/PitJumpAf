@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
 
 	Collider2D mace;
 	private bool attacking = false;
+	private ScoreManager theScoreManager;
 
 	void Start()
 	{
@@ -80,6 +81,7 @@ public class Movement : MonoBehaviour
 		thePowerupManager = FindObjectOfType<PowerupManager>();
 
 		mace = GameObject.Find("Mace").GetComponent<Collider2D>();
+		
 
 
 	}

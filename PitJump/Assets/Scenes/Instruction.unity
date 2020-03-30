@@ -562,7 +562,7 @@ MonoBehaviour:
     <b>C</b> to <b>ATTACK</b>
 
 
-    Grab coins to increase your <b>SCORE</b>
+    Grab coins or kill enemies to increase your <b>SCORE</b>
 
     The
     <b>BIGGER</b> the <b>BETTER</b>
@@ -571,7 +571,7 @@ MonoBehaviour:
     <b> <color=yellow>YELLOW GEM = DOUBLE COINS</color>
     </b>
 
-    <b> <color=#42DDE3>BLUE GEM = DESTROY ENEMIES</color> </b>'
+    <b> <color=#42DDE3>BLUE GEM = DESTROY SPIKES</color> </b>'
 --- !u!222 &915349290
 CanvasRenderer:
   m_ObjectHideFlags: 0

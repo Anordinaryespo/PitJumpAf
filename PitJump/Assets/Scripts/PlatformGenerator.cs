@@ -42,6 +42,9 @@ public class PlatformGenerator : MonoBehaviour
     public ObjectPooler powerupPool;
     public float powerupTreshold;
 
+    public ObjectPooler theSpikesPool;
+    public float randomSpikesTreshold;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -128,7 +131,18 @@ public class PlatformGenerator : MonoBehaviour
                 newEnemy.SetActive(true);
             }
 
-                transform.position = new Vector3(transform.position.x + ((platformWidths[platformSelector])/2) + distanceBetween, transform.position.y, transform.position.z);
+            if (randomNumb > randomSpikesTreshold && randomNumb < randomEnemyTreshold)
+            {
+                GameObject newSpike = theSpikesPool.GetPooledObject();
+
+                Vector3 spikePosition = new Vector3(Random.Range((-platformWidths[platformSelector] /3), (platformWidths[platformSelector] /3)), 1.5f, 0f);
+
+                newSpike.transform.position = transform.position + spikePosition;
+                newSpike.transform.rotation = transform.rotation;
+                newSpike.SetActive(true);
+            }
+
+            transform.position = new Vector3(transform.position.x + ((platformWidths[platformSelector])/2) + distanceBetween, transform.position.y, transform.position.z);
 
 
         }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4823994411604728257}
   - component: {fileID: 625016485182576964}
   - component: {fileID: 1623198928062168886}
+  - component: {fileID: 1511519424037002699}
   m_Layer: 9
   m_Name: Enemy2
   m_TagString: KillBox
@@ -188,3 +189,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 50
+--- !u!95 &1511519424037002699
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456786616695484552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b2ef096b3ed272499aecaa587be20c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
